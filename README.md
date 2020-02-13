@@ -1,2 +1,2 @@
-# img-pro-class
-Image Processing class of IT KMITL
+# Image Processing Class
+Image Processing class of IT KMITL.
