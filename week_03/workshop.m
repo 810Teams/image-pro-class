@@ -4,15 +4,27 @@
 
 clear all;
 
-f = imread('img/Fig0303(a)(breast).tif')
-g = imread('img/Fig0303(a)(breast).tif') 
+% Transform pixel-by-pixel with written function `lcsTrans` (see `lcsTrans.m`)
+img = imread('img/Fig0303(a)(breast).tif');
+img_new = imread('img/Fig0303(a)(breast).tif') ;
 
-for i = 1:570
-    for j = 1:482
-        [s] = lcsTrans(f(i, j));
-        g(i, j) = s;
+for i = 1:length(img)
+    for j = 1:length(img(1, :))
+        img_new(i, j) = lcsTrans(img(i, j));
     end
 end
 
-figure(1), imshow(f);
-figure(2), imshow(g);
+% Display shifted line
+figure(1);
+line = 0:255;
+
+for i = 1:256
+    line(i) = lcsTrans(i - 1);
+end
+
+plot(line)
+
+% Display transformed image 
+figure(2);
+subplot(1, 2, 1); imshow(img);
+subplot(1, 2, 2); imshow(img_new);
