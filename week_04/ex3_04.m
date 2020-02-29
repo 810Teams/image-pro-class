@@ -107,16 +107,3 @@ subplot(2,2,1); imshow(f);
 subplot(2,2,2); imshow(sf1);
 subplot(2,2,3); imshow(sf2);
 subplot(2,2,4); imshow(sf3);
-
-
-
-
-
-
-
-
-
-
-
-
-
