@@ -4,7 +4,7 @@
 
 %%
 
-clear all
+clear all;
 
 %%
 
@@ -19,7 +19,7 @@ g2 = im2double(h); % scaling to double
 
 %%
 
-clear all
+clear all;
 
 %%
 

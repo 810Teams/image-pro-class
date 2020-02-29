@@ -4,8 +4,8 @@
 
 %% Initialize
 
-clear all
-N = [50 25 15 5 0]
+clear all;
+N = [50 25 15 5 0];
 
 %% Image reading
 

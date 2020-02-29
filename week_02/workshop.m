@@ -21,10 +21,12 @@ imwrite(img_lena, 'lena_jung.jpg');
 imwrite(img_lena, 'lena_q5.jpg', 'quality', 5);
 
 % 1.4
+% Convert `lena.jpg` to grayscale
 img_lena = rgb2gray(img_lena);
 subplot(1, 3, 2), imshow(img_lena);
 
 % 1.5
+% Flip `lena.jpg` horizontally
 img_lena = img_lena(:, end:-1:1);
 subplot(1, 3, 3), imshow(img_lena);
 

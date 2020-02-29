@@ -17,20 +17,20 @@
 clear all;
 close all;
 
-f1 = double(rgb2gray(imread('dataset/SQ.png')))/255;
+f1 = mat2gray(rgb2gray(imread('dataset/SQ.png')));
 f1 = fft2(double(f1));
 f1 = fftshift(double(f1));
 f1 = log(1 + abs(f1));
 figure(1);
 subplot(1, 3, 1); imshow(abs(f1), []);
 
-f2 = double(rgb2gray(imread('dataset/Reg_0.png')))/255;
+f2 = mat2gray(rgb2gray(imread('dataset/Reg_0.png')));
 f2 = fft2(double(f2));
 f2 = fftshift(double(f2));
 f2 = log(1 + abs(f2));
 subplot(1, 3, 2); imshow(abs(f2), []);
 
-f3 = double(rgb2gray(imread('dataset/Reg_90.png')))/255;
+f3 = mat2gray(rgb2gray(imread('dataset/Reg_90.png')));
 f3 = fft2(double(f3));
 f3 = fftshift(double(f3));
 f3 = log(1 + abs(f3));

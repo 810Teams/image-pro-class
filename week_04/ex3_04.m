@@ -23,9 +23,9 @@ lowresult1 = imfilter(double(f), w, 'conv', 'replicate');
 lowresult2 = imfilter(double(f), w, 'corr', 'replicate');
 
 figure(2);
-subplot(2,2,1); imshow(f);
-subplot(2,2,2); imshow(lowresult1);
-subplot(2,2,3); imshow(lowresult2);
+subplot(1,3,1); imshow(f);
+subplot(1,3,2); imshow(lowresult1);
+subplot(1,3,3); imshow(lowresult2);
 
 %% 2.1
 
@@ -33,7 +33,7 @@ hw = [1 1 1;
       1 -8 1;
       1 1 1];
 
-hiresult = imfilter(double(f), hw, 'conv', 'replicate')
+hiresult = imfilter(double(f), hw, 'conv', 'replicate');
 
 figure(3);
 subplot(2, 2, 1); imshow(f);
