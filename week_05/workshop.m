@@ -2,6 +2,16 @@
 % workshop.m
 %
 
+% STEPS
+% 1. Read the image.
+% 2. Convert the image to grayscale.
+% 3. Convert the image to double with normalization (0 to 1 scaling).
+% 4. Apply Fourier transformation (fft2), requires double format.
+% 5. Apply Fourier transformation shifting (fftshift), requires double format.
+% 6. Apply log function in order to see the image clearly.
+% 7. Display the image with [] as intensity argument, which does auto scaling.
+%    (See https://www.mathworks.com/help/images/ref/imshow.html)
+
 %% Part 1
 
 clear all;
