@@ -14,7 +14,7 @@ gp1 = c * log(1 + double(x));
 gp2 = c * log2(1 + double(x));
 gp3 = c * log10(1 + double(x));
 
-figure(3);.
+figure(3);
 plot(x, gp1, x, gp2, x, gp3);
 legend('Natural Log', 'Base-2 Log', 'Base-10 Log');
 
@@ -22,10 +22,10 @@ legend('Natural Log', 'Base-2 Log', 'Base-10 Log');
 
 f = imread('img/Fig0206(a)(rose-original).tif');
 g1 = c * log(1 + double(f));
-gs1 = im2uint8(mat2gray(g1));
 g2 = c * log2(1 + double(f));
-gs2 = im2uint8(mat2gray(g2));
 g3 = c * log10(1 + double(f));
+gs1 = im2uint8(mat2gray(g1));
+gs2 = im2uint8(mat2gray(g2));
 gs3 = im2uint8(mat2gray(g3));
 
 figure(4);

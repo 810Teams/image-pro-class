@@ -4,6 +4,8 @@
 
 %% Image reading
 
+clear all;
+
 f = imread('lena.bmp');
 
 %% Image displaying
@@ -19,19 +21,5 @@ figure, imshow(fs);
 
 %% Size and dimensions
 
-k = size(f, 0);
 k = size(f, 1);
 d = ndims(f);
-
-
-
-
-
-
-
-
-
-
-
-
-

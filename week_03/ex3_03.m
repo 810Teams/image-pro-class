@@ -19,10 +19,12 @@ ylim('auto');
 
 %%
 
-hnorm = imhist(f)./numel(f);
+hnorm = imhist(f) ./ numel(f);
 cdf = cumsum(hnorm);
 x = linspace(0, 1, 256);
-figure(5), plot(x, cdf);
+
+figure(5);
+plot(x, cdf);
 axis([0 1 0 1]);
 set(gca, 'xtick', 0:0.2:1);
 set(gca, 'ytick', 0:0.2:1);
