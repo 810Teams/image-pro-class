@@ -3,6 +3,7 @@
 %
 
 clear all;
+close all;
 
 %% Vector comparison
 
