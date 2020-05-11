@@ -18,7 +18,7 @@ g = imnoise(imfilter(f, PSF), 'gaussian', 0, SD^2);
 subplot(3, 2, 5), imshow(g);
 
 INITPSF = ones(size(PSF));
-NUMIT = 100; % number of iterations
+NUMIT = 10; % number of iterations
 DAMPAR = 10*SD; % dampling parameter
 LIM = ceil(size(PSF, 1)/2);
 WEIGHT = zeros(size(g));

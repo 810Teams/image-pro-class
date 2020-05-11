@@ -1,11 +1,14 @@
 % Plotting highpass filters
 
-f = imread('Fig0306(a)(bone-scan-GE).tif');
+clear all;
+close all;
+
+f = imread('lena.bmp');
 
 PQ = paddedsize(size(f));
 D0 = 0.005*PQ(1);
 
-HBW = hpfilter('ideal', PQ(1), PQ(2), D0, 2);
+HBW = hpfilter('gaussian', PQ(1), PQ(2), D0, 2);
 H = 0.9 + 10* HBW;
 
 gbw = dftfilt(double(f), HBW);
